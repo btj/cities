@@ -1,4 +1,4 @@
-package wegen;
+package cities;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -37,7 +37,7 @@ public class City {
 	
 	/**
 	 * @pre | other != null
-	 * @mutates | this, other
+	 * @mutates_properties | this.getConnectedCities(), other.getConnectedCities()
 	 * @post | getConnectedCities().equals(LogicalSet.plus(old(getConnectedCities()), other))
 	 * @post | other.getConnectedCities().equals(LogicalSet.plus(old(other.getConnectedCities()), this))
 	 */
@@ -48,7 +48,7 @@ public class City {
 	
 	/**
 	 * @pre | getConnectedCities().contains(other)
-	 * @mutates | this
+	 * @mutates_properties | this.getConnectedCities(), other.getConnectedCities()
 	 * @post | getConnectedCities().equals(LogicalSet.minus(old(getConnectedCities()), other))
 	 * @post | other.getConnectedCities().equals(LogicalSet.minus(old(other.getConnectedCities()), this))
 	 */

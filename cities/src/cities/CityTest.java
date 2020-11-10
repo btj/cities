@@ -1,4 +1,4 @@
-package wegen;
+package cities;
 
 import static org.junit.jupiter.api.Assertions.*;
 
