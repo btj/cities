@@ -25,6 +25,7 @@ public class City {
 	
 	/**
 	 * @peerObjects
+	 * @basic
 	 */
 	public Set<City> getConnectedCities() {
 		return Set.copyOf(connectedCities);
